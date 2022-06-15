@@ -1,0 +1,22 @@
+<h1>TMDB</h1>
+<div>
+<form [formGroup] ="findArtistbyIdForm">
+<input
+  type="text"
+  class="form-control"
+  placeholder="Enter"
+  formControlName="findById"
+/>
+
+</form>
+<button (click)="findArtristById()">Search</button>
+</div>
+<br>
+
+<div>
+    name : {{person.name}}
+    <br>
+    age : {{person.age}}
+    <br>
+    birthday : {{person.birthday}}
+</div>
