@@ -1,5 +1,6 @@
-<h1>TMDB</h1>
+<app-header></app-header>
 <div>
+    <h3>Artist By Id</h3>
 <form [formGroup] ="findArtistbyIdForm">
 <input
   type="text"
@@ -13,10 +14,12 @@
 </div>
 <br>
 
-<div>
+<div *ngIf="person != undefined">
     name : {{person.name}}
     <br>
     age : {{person.age}}
     <br>
     birthday : {{person.birthday}}
 </div>
+
+<app-tmdb-artist></app-tmdb-artist>

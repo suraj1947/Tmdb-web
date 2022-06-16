@@ -7,34 +7,34 @@ import { TmdbService } from 'src/tmdb.service';
 @Component({
   selector: 'app-tmdb',
   templateUrl: './tmdb.component.html',
-  styleUrls: ['./tmdb.component.css']
+  styleUrls: ['./tmdb.component.css'],
 })
 export class TmdbComponent implements OnInit {
-
   person: Person | undefined;
+  actors: Actor[];
 
-  findArtistbyIdForm : FormGroup = new FormGroup({
-    findById : new FormControl(null,[
-      Validators.min(0),
-      Validators.required]),
+  findArtistbyIdForm: FormGroup = new FormGroup({
+    findById: new FormControl(null, [Validators.min(0), Validators.required]),
   });
 
-  constructor(private tmdbService :TmdbService) { }
 
-  ngOnInit(): void {
-  }
+  constructor(private tmdbService: TmdbService) {}
 
-  findArtristById(){
+  ngOnInit(): void {}
+
+  findArtristById() {
     let id = this.findArtistbyIdForm?.controls?.['findById'].value;
-    this.findById(id)
+    this.findById(id);
   }
 
-  findById(id:string){
+  findById(id: string) {
     this.tmdbService.getPersonById(id).subscribe({
-      next:(resp)=>{
+      next: (resp) => {
         this.person = resp;
-        this.tmdbService.person.next(this.person)
-      }
-    })
+        this.tmdbService.person.next(this.person);
+      },
+    });
   }
+
+  
 }

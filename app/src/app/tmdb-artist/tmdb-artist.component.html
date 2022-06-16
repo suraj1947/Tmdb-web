@@ -1,0 +1,18 @@
+
+<div>
+    <h3>Artist By Name</h3>
+    <form [formGroup] ="findArtistbyNameForm">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter"
+      formControlName="findByName"
+    />
+    </form>
+    <button (click)="findArtristByName()">Search</button>
+</div>
+
+
+<div *ngFor="let actor of actors">
+    name: {{actor.name}}
+</div>

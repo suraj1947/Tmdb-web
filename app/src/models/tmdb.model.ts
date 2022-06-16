@@ -6,6 +6,7 @@ export interface Person{
     gender:number,
     placeOfBirth:string
     birthday: Date
+    profilePath:string
 }
 
 export interface Actor{

@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http';
 import { TmdbComponent } from './tmdb/tmdb.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TmdbArtistComponent } from './tmdb-artist/tmdb-artist.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TmdbComponent
+    TmdbComponent,
+    TmdbArtistComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
