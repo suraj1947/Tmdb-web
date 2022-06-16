@@ -27,7 +27,6 @@ findArtristByName() {
     this.tmdbService.getActorByName(name).subscribe({
       next: (resp) => {
         this.actors = resp;
-        console.log(this.actors);
       },
     });
   }

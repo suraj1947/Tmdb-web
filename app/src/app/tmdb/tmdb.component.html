@@ -1,27 +1,36 @@
 
-<div>
-    <h3>Artist By Id</h3>
-<form [formGroup] ="findArtistbyIdForm">
-<input
-  type="text"
-  class="form-control"
-  placeholder="Enter"
-  formControlName="findById"
-/>
+<div class="row m-4">
+  <h6>Artist By Id</h6>
+  <div class="col-2">
+    <div>
 
-</form>
-<button (click)="findArtristById()">Search</button>
+  <form [formGroup] ="findArtistbyIdForm">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Enter"
+    formControlName="findById"
+  />
+  
+  </form>
+  </div>
+  </div>
+  <div class="col-2">
+    <button class="btn btn-success" (click)="findArtristById()">Search</button>
+  </div>
 </div>
+
 <br>
 
-<div *ngIf="person != undefined">
-    name : {{person.name}}
-    <br>
-    age : {{person.age}}
-    <br>
-    birthday : {{person.birthday}}
+<div class="m-4 d-flex" *ngIf="person != undefined">
+  <div class="row">
+      <label class="col-4">Name</label>
+      <label class="col-4">Age</label>
+      <label class="col-4">Birthday</label>
+      <div class="col-4">{{person.name}}</div>
+      <div class="col-4">{{person.age}}</div>
+      <div class="col-4">{{person.birthday}}</div>
+  </div>
+
 </div>
-<nav>
-  <a routerLink="/artist" routerLinkActive="active">Artist</a>
-</nav>
-<!-- <app-tmdb-artist></app-tmdb-artist> -->
+

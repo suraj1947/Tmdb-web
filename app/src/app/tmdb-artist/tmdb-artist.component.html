@@ -1,18 +1,25 @@
 
+<div class="m-4">
+  <h6>Artist By Name</h6>
+  <div class="row d-flex">
+    <div class="col-2">
+      
+      <form [formGroup] ="findArtistbyNameForm">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter"
+        formControlName="findByName"
+      />
+      </form>
+    </div>
+    <button class="btn btn-success col-1" (click)="findArtristByName()">Search</button>
+
+  </div>
+
+</div>
+
 <div>
-    <h3>Artist By Name</h3>
-    <form [formGroup] ="findArtistbyNameForm">
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Enter"
-      formControlName="findByName"
-    />
-    </form>
-    <button (click)="findArtristByName()">Search</button>
+  
 </div>
 
-
-<div *ngFor="let actor of actors">
-    name: {{actor.name}}
-</div>
