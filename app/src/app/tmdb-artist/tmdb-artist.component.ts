@@ -28,6 +28,9 @@ findArtristByName() {
       next: (resp) => {
         this.actors = resp;
       },
+      error(){
+        "No records found for the mentiond ID"
+      }
     });
   }
 }
