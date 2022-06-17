@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
-import { Actor, Person } from "./models/tmdb.model";
+import { Actor, Person, TvShows } from "./models/tmdb.model";
 
 @Injectable({
     providedIn:'root'
@@ -19,5 +19,9 @@ export class TmdbService{
 
     getPersonById(id:string){
         return this.http.get<Person>(this.baseUrl+`/${id}`)
+    }
+
+    getTvShowsByName(name:string){
+        return this.http.get<TvShows[]>(this.baseUrl+'/tv',{params:{query:name}})
     }
 }

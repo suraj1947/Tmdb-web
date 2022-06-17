@@ -15,3 +15,10 @@ export interface Actor{
     profilePath:string
 }
 
+export interface TvShows{
+    id:string,
+    name: string,
+    overview:string,
+    firstAirDate:string
+}
+

@@ -8,6 +8,7 @@ import { TmdbComponent } from './tmdb/tmdb.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TmdbArtistComponent } from './tmdb-artist/tmdb-artist.component';
 import { HeaderComponent } from './header/header.component';
+import { TvshowsComponent } from './tmdb/tvshows/tvshows.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HeaderComponent } from './header/header.component';
     AppComponent,
     TmdbComponent,
     TmdbArtistComponent,
-    HeaderComponent
+    HeaderComponent,
+    TvshowsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+
+
+<div class="m-4">
+    <h6>Search a Tv Show</h6>
+    <div class="row d-flex">
+      <div class="col-2">
+        
+        <form [formGroup] ="findTvShowsbyNameForm">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter"
+          formControlName="findTvShowsByName"
+        />
+        </form>
+      </div>
+      <button class="btn btn-success col-1" (click)="findTvShowByName()">Search</button>
+      <div class="row mt-4" *ngIf="tvShows!=undefined||null">
+        <div class="col-2 heading">Name</div>
+        <div class="col-2 heading">Id</div>
+        <div class="col-6 heading">Overview</div>
+        <div class="d-flex" *ngFor="let tvShow of tvShows">
+          <div class="col-2">{{tvShow.name}}</div>
+          <div class="col-2">{{tvShow.id}}</div>
+          <div class="col-6">{{tvShow.overview}}</div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
